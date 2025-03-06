@@ -65,7 +65,7 @@ class DaysWeather extends StatelessWidget {
                                   child:Center(child:  newsbox(tem: "${data["forecast"]["forecastday"][index]["day"]["maxtemp_c"]} c", imagepath: "assets/images/weather.png", attime: "${DateFormat('EEEE').format(DateTime.parse(data["forecast"]["forecastday"][index]["date"]))}"),),
                                 ),
                               );
-                            },itemCount: 7,),
+                            },itemCount: data.length,),
                         ),
                         SizedBox(height: 20,),
                         Container(
